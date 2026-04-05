@@ -1,180 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Story Galgame - Turn Stories into Visual Novels</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* Reset and global styles */
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #1a1a2e, #2c3e50);
-        color: #f5f5f5;
-        line-height: 1.6;
-    }
-    header {
-        background: rgba(0,0,0,0.4);
-        backdrop-filter: blur(5px);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 100;
-    }
-    header .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    nav a {
-        margin: 0 1rem;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-    nav a:hover {
-        color: #ff75a0;
-    }
-    /* Hero section */
-    .hero {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 2rem;
-        background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.1), transparent 60%);
-    }
-    .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-    .hero p {
-        max-width: 600px;
-        margin-bottom: 2rem;
-        font-size: 1.2rem;
-    }
-    .cta-button {
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 8px;
-        background: #ff75a0;
-        color: #fff;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-    .cta-button:hover {
-        background: #ff3f7a;
-    }
-    /* Section styles */
-    section {
-        padding: 4rem 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-    .features {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .feature {
-        flex: 1 1 calc(50% - 1rem);
-        background: rgba(255,255,255,0.05);
-        border-radius: 10px;
-        padding: 1rem;
-        margin: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    .feature h3 {
-        margin-top: 0;
-        color: #ff75a0;
-    }
-    footer {
-        text-align: center;
-        padding: 2rem;
-        background: rgba(0,0,0,0.6);
-        margin-top: 2rem;
-    }
-    footer p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #aaa;
-    }
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-        .feature {
-            flex: 1 1 100%;
-        }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernie Story Archive</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">Story Galgame</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#community">Community</a>
-        </nav>
-    </header>
-    <main>
-        <section class="hero" id="home">
-            <h1>Turn Your Stories into Visual Novels</h1>
-            <p>Explore academic papers, novels, or any text in a whole new way. Our interactive visual novel engine transforms your documents into engaging story experiences with dynamic characters and choices.</p>
-            <button class="cta-button" onclick="startStory()">Start Story</button>
-        </section>
-        <section id="about">
-            <h2>About Story Galgame</h2>
-            <p>Story Galgame is inspired by the innovative Paper2Galgame project that converts research papers into gamified visual novels【141095825973480†L43-L56】. We extend this idea to any story or document, giving readers an immersive and interactive experience. Choose a partner to accompany you through the content, answer quizzes to reinforce your understanding, and save your progress at any time【141095825973480†L62-L116】.</p>
-        </section>
-        <section id="features">
-            <h2>Features</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>Upload & Transform</h3>
-                    <p>Upload your favourite story or paper, and our engine will break it into manageable scenes, summarizing complex concepts in conversational dialogue【141095825973480†L107-L113】.</p>
-                </div>
-                <div class="feature">
-                    <h3>Choose Your Partner</h3>
-                    <p>Pick from our roster of AI companions or customize your own character's personality and speaking style to guide you through the story【141095825973480†L116-L123】.</p>
-                </div>
-                <div class="feature">
-                    <h3>Interactive Quizzes</h3>
-                    <p>Test your knowledge with multiple-choice questions between scenes. Receive encouragement or guidance based on your answers【141095825973480†L94-L97】.</p>
-                </div>
-                <div class="feature">
-                    <h3>Save & Share</h3>
-                    <p>Save your progress and export the entire dialogue as a script to review later or share with friends【141095825973480†L112-L114】.</p>
-                </div>
-            </div>
-        </section>
-        <section id="community">
-            <h2>Community</h2>
-            <p>Join our community to discuss your favourite stories, share custom characters, and collaborate on creative prompts. Together we can make reading more fun for everyone!</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Story Galgame. Inspired by Paper2Galgame. All rights reserved.</p>
-    </footer>
-    <script>
-      function startStory() {
-          alert('This is a placeholder for the interactive story engine. In the future, you will be able to upload a document and begin your journey!');
-      }
-    </script>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>BERNIE STORY ARCHIVE</a>
+      <nav class="nav">
+        <a data-nav href="#home">Home</a>
+        <a data-nav href="#notice">Notice</a>
+        <a data-nav href="#worlds">Worlds</a>
+        <a data-nav href="#profiles">Profiles</a>
+        <a data-nav href="#archives">Archives</a>
+        <a data-nav href="#media">Media</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section id="home" class="hero">
+      <div class="hero-bg"><img src="assets/images/digital-awakened.jpg" alt="Story archive hero" /></div>
+      <div class="hero-inner">
+        <div class="kicker">Interactive Storyworld Portal // Hypergryph-inspired interface</div>
+        <h1>ENTER THE <span class="accent">ARCHIVE</span><br/>UNSEAL THE WORLDS</h1>
+        <p>This site reorganises your uploaded story files into a cinematic, game-style portal inspired by the dark sci-fi presentation language of official Hypergryph world sites. The structure now feels like a real franchise website instead of just a file dump.</p>
+        <div class="hero-actions">
+          <a class="button" href="#worlds">Access Storyworlds</a>
+          <a class="button secondary" href="ferropolis.html">Open Ferropolis Core</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-card"><div class="label">Primary Universe</div><strong>Ferropolis</strong><div class="muted">Top / Middle / Bedrock truth layers</div></div>
+          <div class="meta-card"><div class="label">Parallel Archive</div><strong>World-Ending AU</strong><div class="muted">Pressure, empathy, survival</div></div>
+          <div class="meta-card"><div class="label">Sci-Fi Epic</div><strong>Nucleus Dust Realm</strong><div class="muted">Crystallization, coexistence, choice</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="notice" class="section">
+      <div class="section-head">
+        <h2>NOTICE / UPDATES</h2>
+        <p>A homepage block styled like the “notice / information” areas on Hypergryph sites, but fed with your own uploaded narrative materials.</p>
+      </div>
+      <div class="notice-strip">
+        <div class="notice-panel">
+          <h3>System Broadcast</h3>
+          <div class="notice-big">Story files have been rebuilt into a website-ready archive.</div>
+          <p style="color:var(--muted);line-height:1.8;margin:0">The home page now works like a franchise portal: big hero, update rail, world entries, character profiles, themed media blocks, and dedicated subpages for each major narrative.</p>
+        </div>
+        <div class="notice-list">
+          <div class="notice-item"><div class="date">2026 // 04 / 05</div><strong>Ferropolis archive connected</strong><p>Jax and Elara are merged into a single lore hub so the transmedia connection finally feels intentional.</p></div>
+          <div class="notice-item"><div class="date">2026 // 04 / 05</div><strong>World-Ending AU deployed</strong><p>Kevin’s emotional survival arc is now presented as a clean story page with timeline beats and image panels.</p></div>
+          <div class="notice-item"><div class="date">2026 // 04 / 05</div><strong>Nucleus Dust Realm indexed</strong><p>The Chinese sci-fi deck becomes a separate universe page with themes, factions and visual analysis sections.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="worlds" class="section">
+      <div class="section-head">
+        <h2>WORLD ENTRY</h2>
+        <p>Each card is treated like an official world branch. Instead of uploading files as random downloads, the stories are converted into navigable website content.</p>
+      </div>
+      <div class="world-grid">
+        <a class="world-card" href="world-ending.html">
+          <div class="thumb"><img src="assets/images/absolute-cover.jpg" alt="World Ending AU" /></div>
+          <div class="body">
+            <div class="card-tag">Narrative / Survival</div>
+            <h3>World-Ending AU</h3>
+            <p>Kevin survives a collapsing city by working inside a relief station where scarcity, panic and exhaustion slowly push him to the limit before empathy pulls him back.</p>
+            <div class="card-footer"><span class="arrow">View Archive →</span></div>
+          </div>
+        </a>
+        <a class="world-card" href="ferropolis.html">
+          <div class="thumb"><img src="assets/images/digital-ferropolis.jpg" alt="Ferropolis" /></div>
+          <div class="body">
+            <div class="card-tag">Main Storyworld / Transmedia</div>
+            <h3>Ferropolis</h3>
+            <p>A layered dystopian metropolis where Elara exposes erased memory from the Archives and Jax uncovers living proof beneath the bedrock.</p>
+            <div class="card-footer"><span class="arrow">View Archive →</span></div>
+          </div>
+        </a>
+        <a class="world-card" href="nucleus-dust.html">
+          <div class="thumb"><img src="assets/images/nucleus-cover.jpg" alt="Nucleus Dust Realm" /></div>
+          <div class="body">
+            <div class="card-tag">Sci-Fi Epic / Chinese</div>
+            <h3>Nucleus Dust Realm</h3>
+            <p>A post-disaster crystal world built on infection, floating cities, rebel camps, power struggle and the search for a third path toward coexistence.</p>
+            <div class="card-footer"><span class="arrow">View Archive →</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="profiles" class="section">
+      <div class="section-head">
+        <h2>KEY PROFILES</h2>
+        <p>Borrowing the operator / character display feel from Arknights-style sites, but using your own protagonists as the featured cast.</p>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-card"><div class="role">World-Ending AU</div><h3>Kevin</h3><p>19-year-old student, shy and clumsy, pulled into relief-station survival where pressure turns into a lesson about empathy and teamwork.</p></div>
+        <div class="profile-card"><div class="role">Ferropolis</div><h3>Elara</h3><p>The Data Weaver who risks everything to keep a fragile truth alive and awaken a city through the forbidden image of nature.</p></div>
+        <div class="profile-card"><div class="role">Ferropolis</div><h3>Jax</h3><p>A blind sonar-scrapper who hears what the city hides and discovers the titan-tree foundation beneath the doctrine of metal supremacy.</p></div>
+        <div class="profile-card"><div class="role">Nucleus Dust Realm</div><h3>Mac / 麦克</h3><p>A medical researcher pushed beyond simple cure-or-destroy logic, searching for a third route where infected and uninfected can coexist.</p></div>
+      </div>
+    </section>
+
+    <section id="archives" class="section">
+      <div class="section-head">
+        <h2>ARCHIVE FOCUS</h2>
+        <p>The homepage also highlights how the Ferropolis materials can be framed like a proper connected universe instead of two separate school slides.</p>
+      </div>
+      <div class="split-hero">
+        <div class="story-panel">
+          <div class="mini-kicker">Unified Story Spine</div>
+          <h3>Ferropolis becomes the real “main IP” of the site.</h3>
+          <p>Elara handles the informational awakening in the Archives, while Jax provides the physical proof from the undercity. Together they reveal that Ferropolis is built on buried life, hidden memory and systemic suppression.</p>
+          <div class="story-points">
+            <div class="story-point"><strong>Top Layer // Archives</strong><span style="color:var(--muted)">Cold steel, data control, erased history, “Digital Seed” broadcast.</span></div>
+            <div class="story-point"><strong>Deep Layer // Bedrock</strong><span style="color:var(--muted)">Illegal implants, organic thump, amber sap, titan-tree revelation.</span></div>
+            <div class="story-point"><strong>Shared Doctrine</strong><span style="color:var(--muted)">“Metal is eternal; Flesh is fleeting.” becomes the ideological anchor of the site.</span></div>
+          </div>
+        </div>
+        <div class="story-panel" style="padding:0;overflow:hidden">
+          <img src="assets/images/echoes-anomaly.jpg" alt="Ferropolis anomaly" style="width:100%;height:100%;object-fit:cover;min-height:100%" />
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="section">
+      <div class="section-head">
+        <h2>MEDIA / VISUAL ARCHIVE</h2>
+        <p>Slide visuals from your uploaded files are reused as website media panels so the site feels populated immediately.</p>
+      </div>
+      <div class="media-grid">
+        <div class="media-card"><img src="assets/images/absolute-limit.jpg" alt="Kevin at the limit" /><div class="body"><h3>Kevin at the Limit</h3><p>The emotional breaking point in the relief station becomes a cinematic highlight block.</p></div></div>
+        <div class="media-card"><img src="assets/images/digital-awakened.jpg" alt="A city awakened" /><div class="body"><h3>A City Awakened</h3><p>The forest broadcast becomes your main website visual language for revelation and hope.</p></div></div>
+        <div class="media-card"><img src="assets/images/nucleus-core.jpg" alt="Crystallization disease" /><div class="body"><h3>Crystal Catastrophe</h3><p>Nucleus Dust Realm introduces a second visual system built on purple-black disaster and luminous crystal mutation.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>Bernie Story Archive // Static website package for GitHub Pages</div>
+      <div>Reference direction: Hypergryph official world-site style</div>
+    </div>
+  </footer>
+
+  <a class="backtop" href="#home">↑</a>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
