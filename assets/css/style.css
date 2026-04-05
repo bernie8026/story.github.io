@@ -111,3 +111,49 @@ figure img{width:100%;aspect-ratio:16/10;object-fit:cover}
   .quick-grid,.world-grid,.profile-grid,.media-grid,.info-grid,.gallery{grid-template-columns:1fr}
   .hero-inner{padding-top:92px}
 }
+
+
+.interactive-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.terminal,.map-panel,.quiz-panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:24px;box-shadow:0 14px 34px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.02)}
+.terminal,.quiz-panel{padding:24px}
+.segmented{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 18px}
+.segmented button,.choice-btn,.map-node{
+  appearance:none;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:var(--text);cursor:pointer;
+}
+.segmented button,.choice-btn{padding:11px 14px;border-radius:999px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.segmented button.active,.choice-btn.active,.map-node.active{border-color:var(--line);background:rgba(31,214,255,.1);box-shadow:0 0 0 1px rgba(31,214,255,.12) inset}
+.route-image{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08);margin-top:18px}
+.route-image img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.route-list{display:grid;gap:12px;margin-top:16px}
+.route-list div{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:var(--muted);line-height:1.7}
+.map-panel{position:relative;min-height:520px;overflow:hidden}
+.map-panel::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,8,16,.05), rgba(4,8,16,.34)), url('assets/images/digital-ferropolis.jpg') center/cover no-repeat;filter:brightness(.45) saturate(.95)}
+.map-panel::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 22% 24%, rgba(31,214,255,.18), transparent 18%),radial-gradient(circle at 68% 58%, rgba(31,214,255,.16), transparent 18%),radial-gradient(circle at 52% 78%, rgba(200,255,121,.12), transparent 18%),linear-gradient(180deg, rgba(5,8,14,.1), rgba(5,8,14,.66));pointer-events:none}
+.map-canvas{position:relative;z-index:1;min-height:520px;padding:24px}
+.map-node{position:absolute;width:142px;padding:10px 12px;border-radius:16px;text-align:left;font-size:.8rem;line-height:1.45;backdrop-filter:blur(8px)}
+.map-node small{display:block;color:var(--line);text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.map-node.archives{top:14%;left:14%}
+.map-node.deep{top:45%;right:12%}
+.map-node.bedrock{bottom:12%;left:44%}
+.map-node.broadcast{top:10%;right:24%}
+.map-line{position:absolute;background:linear-gradient(90deg, rgba(31,214,255,.05), rgba(31,214,255,.48), rgba(31,214,255,.05));height:2px;transform-origin:left center;z-index:0;opacity:.7}
+.map-line.l1{top:26%;left:25%;width:48%;transform:rotate(12deg)}
+.map-line.l2{top:58%;left:50%;width:22%;transform:rotate(45deg)}
+.map-line.l3{top:31%;left:22%;width:36%;transform:rotate(66deg)}
+.map-readout{position:absolute;left:24px;right:24px;bottom:24px;z-index:2;padding:18px 20px;border-radius:22px;background:rgba(8,12,22,.88);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px)}
+.map-readout .label,.quiz-panel .label{font-size:.74rem;color:var(--line);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.map-readout h3{margin:0 0 8px;font-size:1.24rem}
+.map-readout p{margin:0;color:var(--muted);line-height:1.75}
+.quiz-question{padding:18px 0;border-top:1px solid rgba(255,255,255,.08)}
+.quiz-question:first-of-type{border-top:0;padding-top:0}
+.quiz-question h4{margin:0 0 12px;font-size:1rem}
+.choice-list{display:grid;gap:10px}
+.choice-btn{text-align:left;border-radius:16px;padding:12px 14px;font-size:.92rem;letter-spacing:0;text-transform:none}
+.quiz-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.result-box{margin-top:18px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:var(--muted);line-height:1.75}
+.interactive-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}
+.interactive-card{padding:20px;border-radius:22px;background:var(--panel);border:1px solid rgba(255,255,255,.08)}
+.interactive-card h3{margin:0 0 8px;font-size:1.12rem}
+.interactive-card p{margin:0;color:var(--muted);line-height:1.7}
+@media (max-width:1080px){.interactive-grid,.interactive-links{grid-template-columns:1fr}.map-panel{min-height:620px}}
+@media (max-width:760px){.map-node{width:120px;font-size:.72rem}.map-node.archives{left:6%}.map-node.deep{right:4%}.map-node.bedrock{left:34%}.map-node.broadcast{right:12%}}

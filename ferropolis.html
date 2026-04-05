@@ -59,6 +59,83 @@
   </div>
 </section>
 
+
+<section id="route-sim" class="section">
+  <div class="head"><h2>Route Simulation</h2><p>Audience members can choose which investigative route to follow first. The site stays official in tone, but the reading path becomes interactive.</p></div>
+  <div class="interactive-grid">
+    <div class="terminal">
+      <div class="kicker">Interactive Story Route</div>
+      <h3 data-route-title></h3>
+      <p data-route-desc></p>
+      <div class="segmented">
+        <button type="button" data-route-target="elara">Elara Route</button>
+        <button type="button" data-route-target="jax">Jax Route</button>
+        <button type="button" data-route-target="convergence">Convergence</button>
+      </div>
+      <div class="route-list" data-route-list></div>
+    </div>
+    <div class="terminal">
+      <div class="route-image"><img data-route-img src="assets/images/digital-choice.jpg" alt="Route preview" /></div>
+    </div>
+  </div>
+</section>
+
+<section id="map-terminal" class="section">
+  <div class="head"><h2>Interactive Map</h2><p>A clickable map lets the viewer inspect major nodes of Ferropolis instead of passively scrolling through static world text.</p></div>
+  <div class="map-panel">
+    <div class="map-canvas">
+      <div class="map-line l1"></div>
+      <div class="map-line l2"></div>
+      <div class="map-line l3"></div>
+      <button class="map-node archives" type="button" data-map-key="archives"><small>Zone</small>Archives</button>
+      <button class="map-node broadcast" type="button" data-map-key="broadcast"><small>Zone</small>Broadcast Node</button>
+      <button class="map-node deep" type="button" data-map-key="deep"><small>Zone</small>Deep Layers</button>
+      <button class="map-node bedrock" type="button" data-map-key="bedrock"><small>Zone</small>Bedrock</button>
+      <div class="map-readout">
+        <div class="label">Location Readout</div>
+        <h3 data-map-title></h3>
+        <p data-map-desc></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="briefing-test" class="section">
+  <div class="head"><h2>Briefing Test</h2><p>A question terminal turns the audience into active participants by making them confirm what they have learned about the setting.</p></div>
+  <div class="quiz-panel" data-quiz>
+    <div class="label">Knowledge Check</div>
+    <div class="quiz-question">
+      <h4>1. Which phrase defines the governing doctrine of Ferropolis?</h4>
+      <div class="choice-list">
+        <button class="choice-btn" type="button" data-q="q1" data-value="a">Truth survives beneath the city.</button>
+        <button class="choice-btn" type="button" data-q="q1" data-value="b">Metal is eternal; Flesh is fleeting.</button>
+        <button class="choice-btn" type="button" data-q="q1" data-value="c">Nature returns when memory fails.</button>
+      </div>
+    </div>
+    <div class="quiz-question">
+      <h4>2. What provides material proof that buried organic life still exists under the city?</h4>
+      <div class="choice-list">
+        <button class="choice-btn" type="button" data-q="q2" data-value="a">A thermal scanner log.</button>
+        <button class="choice-btn" type="button" data-q="q2" data-value="b">A broken relay core.</button>
+        <button class="choice-btn" type="button" data-q="q2" data-value="c">Amber sap extracted from the anomaly.</button>
+      </div>
+    </div>
+    <div class="quiz-question">
+      <h4>3. Which layer of Ferropolis is responsible for memory control and historical sanitisation?</h4>
+      <div class="choice-list">
+        <button class="choice-btn" type="button" data-q="q3" data-value="a">The Archives.</button>
+        <button class="choice-btn" type="button" data-q="q3" data-value="b">The Dawn Camp.</button>
+        <button class="choice-btn" type="button" data-q="q3" data-value="c">The Bedrock Vault.</button>
+      </div>
+    </div>
+    <div class="quiz-actions">
+      <button class="button" type="button" data-quiz-submit>Run Check</button>
+      <button class="button alt" type="button" data-quiz-reset>Reset</button>
+    </div>
+    <div class="result-box" data-quiz-result>Select one answer per question, then run the terminal check.</div>
+  </div>
+</section>
+
 <section id="gallery" class="section">
   <div class="head"><h2>Media</h2><p>Visual material can stay restrained and official while still communicating the project’s key setting beats.</p></div>
   <div class="gallery">
